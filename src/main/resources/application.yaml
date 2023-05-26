@@ -1,0 +1,6 @@
+server:
+    servlet:
+        context-path: /pokedex
+    port: 8083
+
+pokemon-external-api: https://pokeapi.co/api/v2/pokemon
