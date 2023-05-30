@@ -14,11 +14,19 @@ public class PokemonResponse {
     private int height;
     private int weight;
     private Collection<MovesResponse> moves;
+    private int countMoves;
+    private boolean isPesado;
 
     public void setName(String name) {
         name = name.substring(0,1).toUpperCase().concat(name.substring(1));
         this.name = name;
     }
 
+    public int getCountMoves() {
+        return moves.size();
+    }
 
+    public boolean isPesado() {
+        return weight >= 100;
+    }
 }
