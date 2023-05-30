@@ -15,5 +15,10 @@ public class PokemonResponse {
     private int weight;
     private Collection<MovesResponse> moves;
 
+    public void setName(String name) {
+        name = name.substring(0,1).toUpperCase().concat(name.substring(1));
+        this.name = name;
+    }
+
 
 }

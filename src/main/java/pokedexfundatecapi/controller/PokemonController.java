@@ -16,9 +16,14 @@ public class PokemonController {
         this.pokemonIntegrationService = pokemonIntegrationService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<PokemonResponse> findById(@PathVariable("id") int id){
         return ResponseEntity.ok(this.pokemonIntegrationService.buscarPokemonPorId(id));
+    }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<PokemonResponse> findByName(@PathVariable("name") String name) {
+       return ResponseEntity.ok(this.pokemonIntegrationService.buscarPokemonPeloName(name));
     }
 
 }

@@ -22,5 +22,9 @@ public class PokemonIntegrationService {
         String urlCompleta = this.uri + "/" + id;
         return this.restTemplate.getForObject(urlCompleta, PokemonResponse.class);
     }
+    public PokemonResponse buscarPokemonPeloName(String name){
+        String urlCompleta = this.uri + "/" + name;
+        return this.restTemplate.getForObject(urlCompleta, PokemonResponse.class);
+    }
 
 }

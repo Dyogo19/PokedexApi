@@ -8,6 +8,6 @@ import pokedexfundatecapi.integration.response.MoveResponse;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MovesResponse {
 
-    private MoveResponse moveResponse;
+    private MoveResponse move;
 
 }
